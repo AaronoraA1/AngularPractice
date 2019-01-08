@@ -1,0 +1,17 @@
+<h1>TO DO LIST</h1>
+<ul>
+  <li *ngFor = "let items of service.items">{{items.text}}</li>
+</ul>
+
+<ul>
+  <app-form 
+   *ngFor = 'let items of service.items'
+    [items] = "items.text"
+    (update) = "onUpdate(items.id, $event.text)"
+  >
+  </app-form>
+</ul>
+
+
+
+
